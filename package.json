@@ -1,0 +1,29 @@
+{
+    "name": "datatables",
+    "version": "0.0.1",
+    "description": "Making DataTables fun again.",
+    "files": [
+        "js/datatables.core.js"
+    ],
+    "main": "js/datatables.core.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Way2WebPieter/DataTables.git"
+    },
+    "keywords": [
+        "datatables",
+        "javascript"
+    ],
+    "author": "Pieter Wigboldus",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/Way2WebPieter/DataTables/issues"
+    },
+    "homepage": "https://github.com/Way2WebPieter/DataTables#readme",
+    "dependencies": {
+        "jquery": ">=1.7",
+        "datatables.net": "1.10.13",
+        "datatables.net-buttons": "1.2.4",
+        "datatables.net-responsive": "2.1.1"
+    }
+}
