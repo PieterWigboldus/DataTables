@@ -1,6 +1,6 @@
 {
     "name": "way2web-datatables",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Making DataTables fun again.",
     "files": [
         "js/datatables.core.js"
@@ -8,7 +8,7 @@
     "main": "js/datatables.core.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Way2WebPieter/DataTables.git"
+        "url": "https://github.com/Way2WebPieter/DataTables.git"
     },
     "keywords": [
         "datatables",
