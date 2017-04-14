@@ -1,0 +1,21 @@
+{
+  "name": "way2web-datatables",
+  "description": "Making DataTables fun again.",
+  "main": "js/datatables.core.js",
+  "authors": [
+    "Pieter Wigboldus"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "datatables",
+    "javascript"
+  ],
+  "homepage": "https://github.com/Way2WebPieter/DataTables",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
