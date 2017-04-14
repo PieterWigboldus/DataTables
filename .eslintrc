@@ -7,9 +7,7 @@
         "browser": true
     },
     "globals": {
-        "Pikaday": false,
-        "Way2web": false,
-        "Modernizr": false
+        "DataTable": false,
     },
     "rules": {
         "no-console": "error",

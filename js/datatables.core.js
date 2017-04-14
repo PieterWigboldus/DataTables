@@ -230,7 +230,7 @@ var DataTable = (function($table, userOptions, translations) {
          * @param {object} tableFilter
          */
         initFilterInput: function(table, colIdx, tableFilter) {
-            var debouncedFiltering = Way2web.Helpers.debounce(function(searchValue) {
+            var debouncedFiltering = functions.debounce(function(searchValue) {
                 table
                     .column(colIdx)
                     .search(searchValue)
@@ -274,11 +274,41 @@ var DataTable = (function($table, userOptions, translations) {
             setInterval(function() {
                 table.ajax.reload();
             }, interval);
+        },
+
+        /**
+         * Debounce a function.
+         *
+         * @param {object} func
+         * @param {number} wait
+         * @param {boolean} immediate
+         *
+         * @return {object}
+         */
+        debounce: function(func, wait, immediate) {
+            var timeout;
+
+            return function() {
+                var context = this;
+                var args = arguments;
+
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = null;
+                    if (!immediate) {
+                        func.apply(context, args);
+                    }
+                }, wait);
+                if (immediate && !timeout) {
+                    func.apply(context, args);
+                }
+            };
         }
     };
 
     return {
         options:   globals.options,
-        functions: functions
+        functions: functions,
+        element:   $table
     };
 });
