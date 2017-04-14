@@ -7,7 +7,7 @@
         "browser": true
     },
     "globals": {
-        "DataTable": false,
+        "DataTable": false
     },
     "rules": {
         "no-console": "error",
