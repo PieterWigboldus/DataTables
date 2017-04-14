@@ -23,7 +23,7 @@
         var item = new DataTable(
             $(this),
             {
-                language: Way2web.Helpers.getLanguage()
+                language: 'nl'
             },
             Table.Translations
         );

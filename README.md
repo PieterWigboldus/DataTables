@@ -1,8 +1,8 @@
 # DataTables
 Making DataTables fun again.
 
-How to use this script:
- - Create a new table in your view. It must follow the following markup:
+## How to use this script:
+ Create a new table in your view. It must follow the following markup:
 
 ```
     <table class="js-datatable" data-source="/url/to/json/source">
@@ -30,6 +30,49 @@ How to use this script:
          </tr>
      </tfoot>
     </table>
+```
+
+Javascript:
+```
+var translations = {
+    get: function(languageCode) {
+        return this[languageCode]();
+    },
+
+    nl: function() {
+        return {
+            'oPaginate': {
+                'sFirst': 'Eerste',
+                'sLast': 'Laatste',
+                'sNext': 'Volgende',
+                'sPrevious': 'Vorige'
+            },
+            'sEmptyTable': 'Geen resultaten aanwezig in de tabel',
+            'sInfo': '_START_ tot _END_ van _TOTAL_ resultaten',
+            'sInfoEmpty': 'Geen resultaten om weer te geven',
+            'sInfoFiltered': ' (gefilterd uit _MAX_ resultaten)',
+            'sInfoPostFix': '',
+            'sInfoThousands': '.',
+            'sLengthMenu': '_MENU_ resultaten weergeven',
+            'sLoadingRecords': 'Een moment geduld aub - bezig met laden...',
+            'sProcessing': 'Bezig...',
+            'sSearch': 'Zoeken:',
+            'sZeroRecords': 'Geen resultaten gevonden'
+        };
+    }
+};
+
+$('.js-datatable').each(function() {
+    var item = new DataTable(
+        $(this),
+        {
+            language: 'nl'
+        },
+        translations
+    );
+
+    item.functions.init();
+});
 ```
 
 ## .js-datatable

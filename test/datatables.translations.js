@@ -9,13 +9,7 @@
      * @return {object}
      */
     Translations.get = function(languageCode) {
-        switch (languageCode) {
-        default: throw 'invalid language code';
-        case 'en':
-            return Translations.en();
-        case 'nl':
-            return Translations.nl();
-        }
+        return this[languageCode]();
     };
 
     /**
